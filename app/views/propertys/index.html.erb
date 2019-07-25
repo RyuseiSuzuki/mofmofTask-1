@@ -1,0 +1,36 @@
+<h1>物件一覧</h1>
+
+<% @property.each do | property | %>
+　　<table>
+     <tr>
+       <td>物件</td>
+       <td>賃料</td>
+       <td>住所</td>
+       <td>築年数</td>
+       <td>備考</td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr>
+        <td><%= property.name %></td>
+        <td><%= property.price %>円</td>
+        <td><%= property.address %></td>
+        <td><%= property.age %>年</td>
+        <td><%= property.remarks %></td>
+        <td>詳細</td>
+        <td>編集</td>
+        <td>削除</td>
+      </tr>
+    </table>
+    <hr>
+    <% #テスト用登録保存確認 %>
+    
+    <% property.nearests.each do | nearest | %>
+    <%= nearest.route_name %>
+    <%= nearest.station %>
+    <%= nearest.time %>
+    <% end %>
+    <hr>
+<% end %>
+<%= link_to '物件登録', new_property_path %>

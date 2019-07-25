@@ -1,3 +1,3 @@
 class Nearest < ApplicationRecord
-  belongs_to :rent
+  belongs_to :property, optional: true
 end
