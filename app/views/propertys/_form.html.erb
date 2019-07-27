@@ -1,4 +1,4 @@
-<%= form_for(@property) do |f| %>
+<%= form_for(@property ,url: route_post ) do |f| %>
 	    <%= f.label :物件名%><br>
 	    <%= f.text_field :name %><br>
 	    <%= f.label :賃料 %><br>

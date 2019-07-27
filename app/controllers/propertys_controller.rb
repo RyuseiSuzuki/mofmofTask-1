@@ -34,8 +34,6 @@ before_action :set_property, only:[:show,:edit,:update,:destroy]
   end
 
   def destroy
-    @property.destroy
-    #redirect_to pictures_path, notice: "ブログを作成しました！"
     redirect_to propertys_path
   end
 
