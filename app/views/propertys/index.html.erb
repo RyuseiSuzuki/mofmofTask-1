@@ -19,7 +19,7 @@
         <td><%= property.age %>年</td>
         <td><%= property.remarks %></td>
         <td><%= link_to '詳細', property %></td>
-        <td><% link_to '編集', edit_property_path(property) %></td>
+        <td><%= link_to '編集', edit_property_path(property) %></td>
         <td><%= link_to '削除', property, method: :delete %></td>
       </tr>
     </table>

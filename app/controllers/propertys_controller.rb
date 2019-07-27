@@ -19,6 +19,20 @@ before_action :set_property, only:[:show,:edit,:update,:destroy]
     end
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @property.update(property_params)
+     redirect_to propertys_path
+   else
+       render 'edit'
+   end
+  end
+
   def destroy
     @property.destroy
     #redirect_to pictures_path, notice: "ブログを作成しました！"
