@@ -11,7 +11,6 @@ before_action :set_property, only:[:show,:edit,:update,:destroy]
 
   def create
     @property = Property.new(property_params)
-    binding.pry
     if @property.save
       redirect_to propertys_path
     else
@@ -34,6 +33,7 @@ before_action :set_property, only:[:show,:edit,:update,:destroy]
   end
 
   def destroy
+    @property.destroy
     redirect_to propertys_path
   end
 

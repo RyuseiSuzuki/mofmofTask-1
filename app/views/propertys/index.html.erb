@@ -2,19 +2,20 @@
 
 <% @property.each do | property | %>
 　　<table>
-     <tr>
-       <td>物件</td>
-       <td>賃料</td>
-       <td>住所</td>
-       <td>築年数</td>
-       <td>備考</td>
+     <tr class="title">
+         <td class="style_name">物件</td>
+         <td class="style_price">賃料</td>
+         <td class="style_address">住所</td>
+         <td class="style_age">築年数</td>
+         <td class="style_remarks">備考</td>
      </tr>
      <tr>
-        <td><%= property.name %></td>
-        <td><%= property.price %>円</td>
-        <td><%= property.address %></td>
-        <td><%= property.age %>年</td>
-        <td><%= property.remarks %></td>
+
+        <td class="style_name"><%= property.name %></td>
+        <td class="style_price"><%= property.price %>円</td>
+        <td class="style_address"><%= property.address %></td>
+        <td class="style_age"><%= property.age %>年</td>
+        <td class="style_remarks"><%= property.remarks %></td>
         <td class="link"><%= link_to '詳細', property %></td>
         <td class="link"><%= link_to '編集', edit_property_path(property) %></td>
         <td class="link"><%= link_to '削除', property, method: :delete %></td>
