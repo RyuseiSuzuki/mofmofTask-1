@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190722152010) do
+ActiveRecord::Schema.define(version: 20190728012127) do
 
   create_table "nearests", force: :cascade do |t|
     t.integer  "property_id"
@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20190722152010) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string   "name"
-    t.string   "price"
-    t.string   "address"
-    t.integer  "age"
-    t.text     "remarks"
+    t.string   "name",       null: false
+    t.string   "price",      null: false
+    t.string   "address",    null: false
+    t.integer  "age",        null: false
+    t.text     "remarks",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
