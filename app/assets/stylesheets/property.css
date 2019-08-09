@@ -1,0 +1,33 @@
+p{
+  padding: 15px;
+}
+
+.link{
+  width:3px;
+}
+
+table{
+  width:100%;
+}
+
+.title{
+ text-align:center;
+}
+
+.style_name{
+  width:5%;
+}
+
+.style_price{
+  width:5%;
+}
+.style_address{
+  width:9%;
+}
+
+.style_age{
+  width:3%;
+}
+.style_remarks{
+  width:75%;
+}
