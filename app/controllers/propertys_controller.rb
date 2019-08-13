@@ -6,7 +6,7 @@ before_action :set_property, only:[:show,:edit,:update,:destroy]
 
   def new
     @property = Property.new
-    2.times { @property.nearests.build }
+    @property.nearests.build 
   end
 
   def create
